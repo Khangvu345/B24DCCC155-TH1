@@ -42,6 +42,12 @@
 		component: './Game',
 		icon: 'TrophyOutlined',
 	},
+	{
+		path: '/todo',
+		name: 'To Do List',
+		component: './TodoList',
+		icon: 'CheckSquareOutlined',
+	},
 
 	// DANH MUC HE THONG
 	// {
