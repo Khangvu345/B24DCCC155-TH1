@@ -36,6 +36,12 @@
 		component: './RandomUser',
 		icon: 'ArrowsAltOutlined',
 	},
+	{
+		path: '/game',
+		name: 'Game',
+		component: './Game',
+		icon: 'TrophyOutlined',
+	},
 
 	// DANH MUC HE THONG
 	// {
