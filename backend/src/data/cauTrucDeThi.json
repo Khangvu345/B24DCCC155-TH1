@@ -1,0 +1,51 @@
+[
+    {
+        "id": "ctdt-001",
+        "ten": "Đề giữa kỳ CS101 - Cấu trúc cơ bản",
+        "monHocId": "mh-001",
+        "danhSachYeuCau": [
+            {
+                "khoiKienThucId": "kkt-001",
+                "mucDo": "de",
+                "soCau": 2
+            },
+            {
+                "khoiKienThucId": "kkt-002",
+                "mucDo": "trungBinh",
+                "soCau": 2
+            },
+            {
+                "khoiKienThucId": "kkt-003",
+                "mucDo": "kho",
+                "soCau": 1
+            }
+        ]
+    },
+    {
+        "id": "ctdt-002",
+        "ten": "Đề cuối kỳ CS101 - Toàn diện",
+        "monHocId": "mh-001",
+        "danhSachYeuCau": [
+            {
+                "khoiKienThucId": "kkt-001",
+                "mucDo": "de",
+                "soCau": 1
+            },
+            {
+                "khoiKienThucId": "kkt-002",
+                "mucDo": "trungBinh",
+                "soCau": 1
+            },
+            {
+                "khoiKienThucId": "kkt-003",
+                "mucDo": "kho",
+                "soCau": 2
+            },
+            {
+                "khoiKienThucId": "kkt-003",
+                "mucDo": "ratKho",
+                "soCau": 1
+            }
+        ]
+    }
+]

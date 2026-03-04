@@ -1,47 +1,31 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# ====== Frontend (base-web-umi) ======
+base-web-umi/node_modules/
+base-web-umi/dist/
+base-web-umi/.umi/
+base-web-umi/.umi-production/
+base-web-umi/.eslintcache
+base-web-umi/build/
+base-web-umi/coverage/
+base-web-umi/functions/
+base-web-umi/.temp/
+base-web-umi/screenshot/
 
-# dependencies
-**/node_modules
-# roadhog-api-doc ignore
-/src/utils/request-temp.js
-_roadhog-api-doc
+# ====== Backend ======
+backend/node_modules/
+backend/dist/
+backend/.env
 
-# production
-/dist
-/.vscode
-
-# misc
-.DS_Store
+# ====== Chung ======
+**/node_modules/
+*.log
 npm-debug.log*
 yarn-error.log
-
-/coverage
-.idea
-# yarn.lock
-package-lock.json
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.history/
 *bak
-.vscode
 
-# visual studio code
-.history
-*.log
-functions/*
-.temp/**
-
-# umi
-.umi
-.umi-production
-
-# screenshot
-screenshot
-.firebase
-.eslintcache
-
-build
-.husky
-
-.vercel
-
-# Sentry Auth Token
-#.sentryclirc
-
+# Backup git (tạm thời)
+backup-git/

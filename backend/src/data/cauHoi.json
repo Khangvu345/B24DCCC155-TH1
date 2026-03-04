@@ -1,0 +1,86 @@
+[
+    {
+        "id": "ch-001",
+        "monHocId": "mh-001",
+        "khoiKienThucId": "kkt-001",
+        "noiDung": "Trình bày khái niệm biến và kiểu dữ liệu trong lập trình. Cho ví dụ minh họa.",
+        "mucDo": "de"
+    },
+    {
+        "id": "ch-002",
+        "monHocId": "mh-001",
+        "khoiKienThucId": "kkt-001",
+        "noiDung": "Phân biệt vòng lặp for và while. Khi nào nên dùng loại nào?",
+        "mucDo": "de"
+    },
+    {
+        "id": "ch-003",
+        "monHocId": "mh-001",
+        "khoiKienThucId": "kkt-002",
+        "noiDung": "Viết chương trình tìm số nguyên tố trong mảng một chiều. Phân tích độ phức tạp.",
+        "mucDo": "trungBinh"
+    },
+    {
+        "id": "ch-004",
+        "monHocId": "mh-001",
+        "khoiKienThucId": "kkt-002",
+        "noiDung": "Giải thích khái niệm đệ quy. Viết hàm đệ quy tính giai thừa và phân tích stack call.",
+        "mucDo": "trungBinh"
+    },
+    {
+        "id": "ch-005",
+        "monHocId": "mh-001",
+        "khoiKienThucId": "kkt-003",
+        "noiDung": "So sánh ưu nhược điểm của các thuật toán sắp xếp: Bubble Sort, Quick Sort, Merge Sort.",
+        "mucDo": "kho"
+    },
+    {
+        "id": "ch-006",
+        "monHocId": "mh-001",
+        "khoiKienThucId": "kkt-003",
+        "noiDung": "Thiết kế và cài đặt cấu trúc dữ liệu Stack sử dụng mảng. Xử lý trường hợp tràn stack.",
+        "mucDo": "kho"
+    },
+    {
+        "id": "ch-007",
+        "monHocId": "mh-001",
+        "khoiKienThucId": "kkt-003",
+        "noiDung": "Phân tích và tối ưu thuật toán tìm kiếm nhị phân trên cây BST không cân bằng. Đề xuất cải tiến.",
+        "mucDo": "ratKho"
+    },
+    {
+        "id": "ch-008",
+        "monHocId": "mh-002",
+        "khoiKienThucId": "kkt-001",
+        "noiDung": "Trình bày khái niệm và ứng dụng của danh sách liên kết đơn.",
+        "mucDo": "de"
+    },
+    {
+        "id": "ch-009",
+        "monHocId": "mh-002",
+        "khoiKienThucId": "kkt-002",
+        "noiDung": "Cài đặt thuật toán duyệt cây nhị phân theo thứ tự trước, giữa, sau. So sánh kết quả.",
+        "mucDo": "trungBinh"
+    },
+    {
+        "id": "ch-010",
+        "monHocId": "mh-002",
+        "khoiKienThucId": "kkt-003",
+        "noiDung": "Giải bài toán đường đi ngắn nhất bằng thuật toán Dijkstra. Phân tích độ phức tạp.",
+        "mucDo": "kho"
+    },
+    {
+        "id": "ch-011",
+        "monHocId": "mh-002",
+        "khoiKienThucId": "kkt-003",
+        "noiDung": "So sánh hiệu suất của Hash Table với cây AVL cho bài toán tìm kiếm. Khi nào chọn cái nào?",
+        "mucDo": "ratKho"
+    },
+    {
+        "id": "ch-012",
+        "monHocId": "mh-003",
+        "khoiKienThucId": "kkt-001",
+        "noiDung": "Trình bày các khái niệm cơ bản của mô hình quan hệ: bảng, khóa chính, khóa ngoại.",
+        "mucDo": "de"
+    }
+]
