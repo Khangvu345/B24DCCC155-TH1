@@ -15,8 +15,8 @@ const FormKhoiKienThuc = () => {
     }, [isEdit, row, form]);
 
     const onFinish = async (values: any) => {
-        if (isEdit && row?._id) {
-            await handleUpdate(row._id, values);
+        if (isEdit && row?.id) {
+            await handleUpdate(row.id, values);
         } else {
             await handleCreate(values);
         }
@@ -29,26 +29,11 @@ const FormKhoiKienThuc = () => {
             onFinish={onFinish}
         >
             <Form.Item
-                label="Mã Khối Kiến Thức"
-                name="maKhoiKienThuc"
-                rules={[{ required: true, message: 'Vui lòng nhập mã khối kiến thức!' }]}
-            >
-                <Input placeholder="Nhập mã khối kiến thức" />
-            </Form.Item>
-
-            <Form.Item
                 label="Tên Khối Kiến Thức"
-                name="tenKhoiKienThuc"
+                name="ten"
                 rules={[{ required: true, message: 'Vui lòng nhập tên khối kiến thức!' }]}
             >
                 <Input placeholder="Nhập tên khối kiến thức" />
-            </Form.Item>
-
-            <Form.Item
-                label="Mô tả"
-                name="moTa"
-            >
-                <Input.TextArea rows={4} placeholder="Nhập mô tả (không bắt buộc)" />
             </Form.Item>
 
             <div style={{ textAlign: 'right' }}>

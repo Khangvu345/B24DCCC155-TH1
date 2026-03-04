@@ -1,6 +1,6 @@
 import axios from '@/utils/axios';
 
-const API_BASE = 'http://localhost:3000/api/quan-ly-ngan-hang-cau-hoi/khoi-kien-thuc';
+const API_BASE = 'http://localhost:8080/api/quan-ly-ngan-hang-cau-hoi/khoi-kien-thuc';
 
 export const getKhoiKienThuc = async (params?: any) => {
     return axios.get(API_BASE, { params });

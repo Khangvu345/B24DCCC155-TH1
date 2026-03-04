@@ -13,19 +13,9 @@ const DanhSachKhoiKienThuc = () => {
 
     const columns = [
         {
-            title: 'Mã Khối Kiến Thức',
-            dataIndex: 'maKhoiKienThuc',
-            key: 'maKhoiKienThuc',
-        },
-        {
             title: 'Tên Khối Kiến Thức',
-            dataIndex: 'tenKhoiKienThuc',
-            key: 'tenKhoiKienThuc',
-        },
-        {
-            title: 'Mô tả',
-            dataIndex: 'moTa',
-            key: 'moTa',
+            dataIndex: 'ten',
+            key: 'ten',
         },
         {
             title: 'Thao tác',
@@ -46,7 +36,7 @@ const DanhSachKhoiKienThuc = () => {
                     </Button>
                     <Popconfirm
                         title="Bạn có chắc chắn muốn xóa?"
-                        onConfirm={() => handleDelete(record._id)}
+                        onConfirm={() => handleDelete(record.id)}
                         okText="Có"
                         cancelText="Không"
                     >
@@ -75,7 +65,7 @@ const DanhSachKhoiKienThuc = () => {
                 </Button>
             </div>
             <Table
-                rowKey="_id"
+                rowKey="id"
                 loading={loading}
                 dataSource={data}
                 columns={columns}

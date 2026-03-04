@@ -1,20 +1,20 @@
 [
-    {
-        "id": "mh-001",
-        "maMonHoc": "CS101",
-        "tenMonHoc": "Nhập môn lập trình",
-        "soTinChi": 3
-    },
-    {
-        "id": "mh-002",
-        "maMonHoc": "CS201",
-        "tenMonHoc": "Cấu trúc dữ liệu và giải thuật",
-        "soTinChi": 4
-    },
-    {
-        "id": "mh-003",
-        "maMonHoc": "CS301",
-        "tenMonHoc": "Cơ sở dữ liệu",
-        "soTinChi": 3
-    }
+  {
+    "id": "mh-001",
+    "maMonHoc": "CS101",
+    "tenMonHoc": "Nhập môn lập trình",
+    "soTinChi": 3
+  },
+  {
+    "id": "mh-002",
+    "maMonHoc": "CS201",
+    "tenMonHoc": "Cấu trúc dữ liệu và giải thuật",
+    "soTinChi": 4
+  },
+  {
+    "id": "mh-003",
+    "maMonHoc": "CS301",
+    "tenMonHoc": "Cơ sở dữ liệu",
+    "soTinChi": 3
+  }
 ]

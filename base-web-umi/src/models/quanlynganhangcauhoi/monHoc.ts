@@ -3,11 +3,10 @@ import { getMonHoc, createMonHoc, updateMonHoc, deleteMonHoc } from '@/services/
 import { message } from 'antd';
 
 export interface MonHocRecord {
-    _id: string;
+    id: string;
     maMonHoc: string;
     tenMonHoc: string;
     soTinChi: number;
-    moTa?: string;
     createdAt?: string;
     updatedAt?: string;
 }

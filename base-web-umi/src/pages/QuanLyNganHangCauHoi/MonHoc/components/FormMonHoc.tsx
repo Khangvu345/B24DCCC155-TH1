@@ -15,8 +15,8 @@ const FormMonHoc = () => {
     }, [isEdit, row, form]);
 
     const onFinish = async (values: any) => {
-        if (isEdit && row?._id) {
-            await handleUpdate(row._id, values);
+        if (isEdit && row?.id) {
+            await handleUpdate(row.id, values);
         } else {
             await handleCreate(values);
         }
@@ -50,13 +50,6 @@ const FormMonHoc = () => {
                 rules={[{ required: true, message: 'Vui lòng nhập số tín chỉ!' }]}
             >
                 <InputNumber min={1} max={10} style={{ width: '100%' }} placeholder="Nhập số tín chỉ" />
-            </Form.Item>
-
-            <Form.Item
-                label="Mô tả"
-                name="moTa"
-            >
-                <Input.TextArea rows={4} placeholder="Nhập mô tả (không bắt buộc)" />
             </Form.Item>
 
             <div style={{ textAlign: 'right' }}>

@@ -12,8 +12,8 @@ const FormCauHoi = () => {
         if (isEdit && row) {
             form.setFieldsValue({
                 ...row,
-                monHocId: typeof row.monHocId === 'object' ? row.monHocId?._id : row.monHocId,
-                khoiKienThucId: typeof row.khoiKienThucId === 'object' ? row.khoiKienThucId?._id : row.khoiKienThucId,
+                monHocId: typeof row.monHocId === 'object' ? row.monHocId?.id : row.monHocId,
+                khoiKienThucId: typeof row.khoiKienThucId === 'object' ? row.khoiKienThucId?.id : row.khoiKienThucId,
             });
         } else {
             form.resetFields();
@@ -21,8 +21,8 @@ const FormCauHoi = () => {
     }, [isEdit, row, form]);
 
     const onFinish = async (values: any) => {
-        if (isEdit && row?._id) {
-            await handleUpdate(row._id, values);
+        if (isEdit && row?.id) {
+            await handleUpdate(row.id, values);
         } else {
             await handleCreate(values);
         }
@@ -37,24 +37,15 @@ const FormCauHoi = () => {
             <Row gutter={16}>
                 <Col span={12}>
                     <Form.Item
-                        label="Mã Câu Hỏi"
-                        name="maCauHoi"
-                        rules={[{ required: true, message: 'Vui lòng nhập mã câu hỏi!' }]}
-                    >
-                        <Input placeholder="Nhập mã câu hỏi..." />
-                    </Form.Item>
-                </Col>
-                <Col span={12}>
-                    <Form.Item
                         label="Mức độ khó"
-                        name="mucDoKho"
+                        name="mucDo"
                         rules={[{ required: true, message: 'Vui lòng chọn mức độ khó!' }]}
                     >
                         <Select placeholder="Chọn mức độ khó">
-                            <Select.Option value="Dễ">Dễ</Select.Option>
-                            <Select.Option value="Trung bình">Trung bình</Select.Option>
-                            <Select.Option value="Khó">Khó</Select.Option>
-                            <Select.Option value="Rất khó">Rất khó</Select.Option>
+                            <Select.Option value="de">Dễ</Select.Option>
+                            <Select.Option value="trungBinh">Trung bình</Select.Option>
+                            <Select.Option value="kho">Khó</Select.Option>
+                            <Select.Option value="ratKho">Rất khó</Select.Option>
                         </Select>
                     </Form.Item>
                 </Col>
@@ -70,7 +61,7 @@ const FormCauHoi = () => {
                         <Select
                             showSearch
                             placeholder="Chọn môn học"
-                            options={listMonHoc.map((m: any) => ({ value: m._id, label: m.tenMonHoc }))}
+                            options={listMonHoc.map((m: any) => ({ value: m.id, label: m.tenMonHoc }))}
                             filterOption={(input, option) =>
                                 (option?.label ?? '').toLowerCase().includes(input.toLowerCase())
                             }
@@ -86,7 +77,7 @@ const FormCauHoi = () => {
                         <Select
                             showSearch
                             placeholder="Chọn khối kiến thức"
-                            options={listKhoiKienThuc.map((k: any) => ({ value: k._id, label: k.tenKhoiKienThuc }))}
+                            options={listKhoiKienThuc.map((k: any) => ({ value: k.id, label: k.ten }))}
                             filterOption={(input, option) =>
                                 (option?.label ?? '').toLowerCase().includes(input.toLowerCase())
                             }

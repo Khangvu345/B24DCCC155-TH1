@@ -3,10 +3,8 @@ import { getKhoiKienThuc, createKhoiKienThuc, updateKhoiKienThuc, deleteKhoiKien
 import { message } from 'antd';
 
 export interface KhoiKienThucRecord {
-    _id: string;
-    maKhoiKienThuc: string;
-    tenKhoiKienThuc: string;
-    moTa?: string;
+    id: string;
+    ten: string;
     createdAt?: string;
     updatedAt?: string;
 }

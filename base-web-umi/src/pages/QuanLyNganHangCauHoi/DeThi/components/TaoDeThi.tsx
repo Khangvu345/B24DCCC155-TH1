@@ -1,7 +1,8 @@
-import { Button, Form, Select, Col, Row, InputNumber, Space } from 'antd';
+import { Button, Form, Select, Col, Row, InputNumber, Space, Input } from 'antd';
 import { useModel } from 'umi';
 import { useEffect } from 'react';
 import { MinusCircleOutlined, PlusOutlined } from '@ant-design/icons';
+import { createCauTruc } from '@/services/QuanLyNganHangCauHoi/deThi';
 
 const TaoDeThi = () => {
     const { handleTaoDeThi, loading, setVisibleTaoDeThi } = useModel('quanlynganhangcauhoi.deThi');
@@ -16,9 +17,27 @@ const TaoDeThi = () => {
 
     const onFinish = async (values: any) => {
         try {
-            await handleTaoDeThi(values);
+            // Backend taoTuDong expects tieuDe and cauTrucDeThiId
+            // So we first create the CauTrucDeThi based on the form values
+            const cauTrucPayload = {
+                ten: `Cấu trúc đề tự động - ${new Date().getTime()}`,
+                monHocId: values.monHocId,
+                danhSachYeuCau: values.cauTrucDiem.map((c: any) => ({
+                    khoiKienThucId: c.khoiKienThucId,
+                    mucDo: c.mucDo,
+                    soCau: c.soLuong
+                }))
+            };
+            const cauTrucRes = await createCauTruc(cauTrucPayload);
+            const cauTrucId = cauTrucRes.data.data.id;
+
+            // Then call taoTuDong with the new structure
+            await handleTaoDeThi({
+                tieuDe: values.tieuDe,
+                cauTrucDeThiId: cauTrucId
+            });
         } catch (e) {
-            // Error mapping is handled in services interceptor or model
+            // Error handling
         }
     };
 
@@ -27,7 +46,7 @@ const TaoDeThi = () => {
             form={form}
             layout="vertical"
             onFinish={onFinish}
-            initialValues={{ cauTrucDiem: [{ khoiKienThucId: undefined, mucDoKho: undefined, soLuong: 1, diemMoiCau: 1 }] }}
+            initialValues={{ cauTrucDiem: [{ khoiKienThucId: undefined, mucDo: undefined, soLuong: 1 }] }}
         >
             <Row gutter={16}>
                 <Col span={12}>
@@ -39,7 +58,7 @@ const TaoDeThi = () => {
                         <Select
                             showSearch
                             placeholder="Chọn môn học"
-                            options={listMonHoc.map((m: any) => ({ value: m._id, label: m.tenMonHoc }))}
+                            options={listMonHoc.map((m: any) => ({ value: m.id, label: m.tenMonHoc }))}
                             filterOption={(input, option) =>
                                 (option?.label ?? '').toLowerCase().includes(input.toLowerCase())
                             }
@@ -48,11 +67,11 @@ const TaoDeThi = () => {
                 </Col>
                 <Col span={12}>
                     <Form.Item
-                        label="Thời gian làm bài (Phút)"
-                        name="thoiGianLamBai"
-                        rules={[{ required: true, message: 'Vui lòng nhập thời gian!' }]}
+                        label="Tiêu đề đề thi"
+                        name="tieuDe"
+                        rules={[{ required: true, message: 'Vui lòng nhập tiêu đề!' }]}
                     >
-                        <InputNumber min={5} style={{ width: '100%' }} placeholder="Ví dụ: 90" />
+                        <Input placeholder="Ví dụ: Đề thi Giữa kỳ 1" />
                     </Form.Item>
                 </Col>
             </Row>
@@ -71,19 +90,19 @@ const TaoDeThi = () => {
                                     <Select
                                         style={{ width: 220 }}
                                         placeholder="Khối kiến thức"
-                                        options={listKhoiKienThuc.map((k: any) => ({ value: k._id, label: k.tenKhoiKienThuc }))}
+                                        options={listKhoiKienThuc.map((k: any) => ({ value: k.id, label: k.ten }))}
                                     />
                                 </Form.Item>
                                 <Form.Item
                                     {...restField}
-                                    name={[name, 'mucDoKho']}
+                                    name={[name, 'mucDo']}
                                     rules={[{ required: true, message: 'Chọn mức độ!' }]}
                                 >
                                     <Select style={{ width: 140 }} placeholder="Mức độ khó">
-                                        <Select.Option value="Dễ">Dễ</Select.Option>
-                                        <Select.Option value="Trung bình">Trung bình</Select.Option>
-                                        <Select.Option value="Khó">Khó</Select.Option>
-                                        <Select.Option value="Rất khó">Rất khó</Select.Option>
+                                        <Select.Option value="de">Dễ</Select.Option>
+                                        <Select.Option value="trungBinh">Trung bình</Select.Option>
+                                        <Select.Option value="kho">Khó</Select.Option>
+                                        <Select.Option value="ratKho">Rất khó</Select.Option>
                                     </Select>
                                 </Form.Item>
                                 <Form.Item
@@ -93,13 +112,7 @@ const TaoDeThi = () => {
                                 >
                                     <InputNumber placeholder="SL" min={1} style={{ width: 80 }} />
                                 </Form.Item>
-                                <Form.Item
-                                    {...restField}
-                                    name={[name, 'diemMoiCau']}
-                                    rules={[{ required: true, message: 'Nhập Điểm!' }]}
-                                >
-                                    <InputNumber placeholder="Điểm" min={0.25} step={0.25} style={{ width: 80 }} />
-                                </Form.Item>
+
                                 {fields.length > 1 && (
                                     <MinusCircleOutlined onClick={() => remove(name)} style={{ color: 'red' }} />
                                 )}

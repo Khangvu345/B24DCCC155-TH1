@@ -1,6 +1,6 @@
 import axios from '@/utils/axios';
 
-const API_BASE = 'http://localhost:3000/api/quan-ly-ngan-hang-cau-hoi/mon-hoc';
+const API_BASE = 'http://localhost:8080/api/quan-ly-ngan-hang-cau-hoi/mon-hoc';
 
 export const getMonHoc = async (params?: any) => {
     return axios.get(API_BASE, { params });

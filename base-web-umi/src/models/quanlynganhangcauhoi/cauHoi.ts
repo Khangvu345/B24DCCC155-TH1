@@ -3,12 +3,11 @@ import { getCauHoi, createCauHoi, updateCauHoi, deleteCauHoi } from '@/services/
 import { message } from 'antd';
 
 export interface CauHoiRecord {
-    _id: string;
-    maCauHoi: string;
+    id: string;
     monHocId: any;
     khoiKienThucId?: any;
     noiDung: string;
-    mucDoKho: 'Dễ' | 'Trung bình' | 'Khó' | 'Rất khó';
+    mucDo: 'de' | 'trungBinh' | 'kho' | 'ratKho';
     createdAt?: string;
     updatedAt?: string;
 }

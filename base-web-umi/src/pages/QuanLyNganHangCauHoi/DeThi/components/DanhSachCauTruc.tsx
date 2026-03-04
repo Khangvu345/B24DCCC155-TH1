@@ -1,36 +1,31 @@
 import { Button, Modal, Table, Popconfirm, Space } from 'antd';
 import { useEffect } from 'react';
 import { useModel } from 'umi';
-import { DeleteOutlined, EyeOutlined, PlusOutlined } from '@ant-design/icons';
-import TaoDeThi from './TaoDeThi';
-import ChiTietDeThi from './ChiTietDeThi';
-import moment from 'moment';
+import { DeleteOutlined, FileAddOutlined, PlusOutlined } from '@ant-design/icons';
+import TaoDeThiTuCauTruc from './TaoDeThiTuCauTruc';
+import FormCauTrucDeThi from './FormCauTrucDeThi';
+import { useState } from 'react';
 
-const DanhSachDeThi = () => {
-    const { danhSachDeThi, loading, fetchDeThi, setVisibleTaoDeThi, visibleTaoDeThi, visibleChiTiet, setVisibleChiTiet, handleXemChiTiet, handleDelete } = useModel('quanlynganhangcauhoi.deThi');
+const DanhSachCauTruc = () => {
+    const { danhSachCauTruc, loading, fetchCauTruc, handleDeleteCauTrucDeThi, setVisibleTaoDeThiTaiCauTruc, visibleTaoDeThiTaiCauTruc, setCurrentCauTruc } = useModel('quanlynganhangcauhoi.deThi');
     const { data: listMonHoc, fetchMonHoc } = useModel('quanlynganhangcauhoi.monHoc');
+    const [visibleMoModalThem, setVisibleMoModalThem] = useState(false);
 
     useEffect(() => {
-        fetchDeThi();
+        fetchCauTruc();
         if (listMonHoc.length === 0) fetchMonHoc();
     }, []);
 
     const columns = [
         {
-            title: 'Tiêu Đề',
-            dataIndex: 'tieuDe',
-            key: 'tieuDe',
+            title: 'Tên Cấu Trúc',
+            dataIndex: 'ten',
+            key: 'ten',
         },
         {
             title: 'Môn Học',
             dataIndex: 'monHocId',
             render: (val: any) => listMonHoc.find((m: any) => m.id === val)?.tenMonHoc || val
-        },
-
-        {
-            title: 'Ngày tạo',
-            dataIndex: 'ngayTao',
-            render: (val: string) => moment(val).format('DD/MM/YYYY HH:mm')
         },
         {
             title: 'Thao tác',
@@ -40,14 +35,17 @@ const DanhSachDeThi = () => {
                 <Space>
                     <Button
                         type="primary"
-                        icon={<EyeOutlined />}
-                        onClick={() => handleXemChiTiet(record.id)}
+                        icon={<FileAddOutlined />}
+                        onClick={() => {
+                            setCurrentCauTruc(record);
+                            setVisibleTaoDeThiTaiCauTruc(true);
+                        }}
                     >
-                        Chi tiết
+                        Tạo Đề Thi
                     </Button>
                     <Popconfirm
-                        title="Bạn có chắc chắn muốn xóa đề thi này?"
-                        onConfirm={() => handleDelete(record.id)}
+                        title="Bạn có chắc chắn muốn xóa cấu trúc này?"
+                        onConfirm={() => handleDeleteCauTrucDeThi(record.id)}
                         okText="Có"
                         cancelText="Không"
                     >
@@ -67,16 +65,16 @@ const DanhSachDeThi = () => {
                     type="primary"
                     icon={<PlusOutlined />}
                     onClick={() => {
-                        setVisibleTaoDeThi(true);
+                        setVisibleMoModalThem(true);
                     }}
                 >
-                    Tạo đề thi tự động
+                    Thêm Cấu trúc Đề thi
                 </Button>
             </div>
             <Table
                 rowKey="id"
                 loading={loading}
-                dataSource={danhSachDeThi}
+                dataSource={danhSachCauTruc}
                 columns={columns}
                 bordered
             />
@@ -84,30 +82,29 @@ const DanhSachDeThi = () => {
             <Modal
                 destroyOnClose
                 footer={null}
-                width={800}
-                title="Tạo đề thi tự động"
-                visible={visibleTaoDeThi}
+                width={600}
+                title={`Tạo đề thi từ cấu trúc: ${useModel('quanlynganhangcauhoi.deThi').currentCauTruc?.ten}`}
+                visible={visibleTaoDeThiTaiCauTruc}
                 onCancel={() => {
-                    setVisibleTaoDeThi(false);
+                    setVisibleTaoDeThiTaiCauTruc(false);
+                    setCurrentCauTruc(undefined);
                 }}
             >
-                <TaoDeThi />
+                <TaoDeThiTuCauTruc />
             </Modal>
 
             <Modal
                 destroyOnClose
                 footer={null}
-                width={1000}
-                title="Chi tiết Đề Thi"
-                visible={visibleChiTiet}
-                onCancel={() => {
-                    setVisibleChiTiet(false);
-                }}
+                width={800}
+                title="Tạo Cấu Trúc Đề Thi Khung"
+                visible={visibleMoModalThem}
+                onCancel={() => setVisibleMoModalThem(false)}
             >
-                <ChiTietDeThi />
+                <FormCauTrucDeThi onCancel={() => setVisibleMoModalThem(false)} />
             </Modal>
         </div>
     );
 };
 
-export default DanhSachDeThi;
+export default DanhSachCauTruc;

@@ -12,5 +12,29 @@
       "ch-005"
     ],
     "ngayTao": "2026-03-04T14:08:46.984Z"
+  },
+  {
+    "id": "b310f936-4961-46ca-9e11-3f797b700203",
+    "tieuDe": "Báo cáo thành viên thuyết trình nhóm 3 ",
+    "monHocId": "mh-002",
+    "cauTrucDeThiId": "7df37e96-2c86-49ff-85c6-b44f9c6bc060",
+    "danhSachCauHoi": [
+      "ch-008"
+    ],
+    "ngayTao": "2026-03-04T16:53:47.763Z"
+  },
+  {
+    "id": "270c2c51-c5a1-4660-9e14-43717132679b",
+    "tieuDe": "Báo cáo thành viên thuyết trình nhóm 3 ",
+    "monHocId": "mh-001",
+    "cauTrucDeThiId": "ctdt-001",
+    "danhSachCauHoi": [
+      "ch-002",
+      "ch-001",
+      "ch-004",
+      "ch-003",
+      "ch-005"
+    ],
+    "ngayTao": "2026-03-04T17:02:56.465Z"
   }
 ]

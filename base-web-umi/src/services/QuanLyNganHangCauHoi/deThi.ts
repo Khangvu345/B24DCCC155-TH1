@@ -1,7 +1,7 @@
 import axios from '@/utils/axios';
 
-const API_DETHI = 'http://localhost:3000/api/quan-ly-ngan-hang-cau-hoi/de-thi';
-const API_CAU_TRUC = 'http://localhost:3000/api/quan-ly-ngan-hang-cau-hoi/cau-truc-de-thi';
+const API_DETHI = 'http://localhost:8080/api/quan-ly-ngan-hang-cau-hoi/de-thi';
+const API_CAU_TRUC = 'http://localhost:8080/api/quan-ly-ngan-hang-cau-hoi/cau-truc-de-thi';
 
 // Cấu trúc đề thi
 export const getCauTruc = async (params?: any) => axios.get(API_CAU_TRUC, { params });

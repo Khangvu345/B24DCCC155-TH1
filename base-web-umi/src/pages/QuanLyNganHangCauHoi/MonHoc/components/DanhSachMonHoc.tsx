@@ -28,11 +28,6 @@ const DanhSachMonHoc = () => {
             key: 'soTinChi',
         },
         {
-            title: 'Mô tả',
-            dataIndex: 'moTa',
-            key: 'moTa',
-        },
-        {
             title: 'Thao tác',
             key: 'action',
             align: 'center' as const,
@@ -51,7 +46,7 @@ const DanhSachMonHoc = () => {
                     </Button>
                     <Popconfirm
                         title="Bạn có chắc chắn muốn xóa môn học này?"
-                        onConfirm={() => handleDelete(record._id)}
+                        onConfirm={() => handleDelete(record.id)}
                         okText="Có"
                         cancelText="Không"
                     >
@@ -80,7 +75,7 @@ const DanhSachMonHoc = () => {
                 </Button>
             </div>
             <Table
-                rowKey="_id"
+                rowKey="id"
                 loading={loading}
                 dataSource={data}
                 columns={columns}
