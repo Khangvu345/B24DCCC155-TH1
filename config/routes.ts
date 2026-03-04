@@ -1,4 +1,7 @@
-﻿export default [
+﻿import component from '@/locales/en-US/component';
+import route from 'mock/route';
+
+export default [
 	{
 		path: '/user',
 		layout: false,
@@ -53,6 +56,33 @@
 		name: 'Oẳn tù tì',
 		component: './OanTuTi',
 		icon: 'ScissorOutlined',
+	},
+	{
+		path: '/quan-ly-ngan-hang-cau-hoi',
+		name: 'Quản lý ngân hàng câu hỏi',
+		routes: [
+			{
+				name: 'Khối kiến thức',
+				path: '/quan-ly-ngan-hang-cau-hoi/khoi-kien-thuc',
+				component: './QuanLyNganHangCauHoi/KhoiKienThuc',
+			},
+			{
+				name: 'Môn học',
+				path: '/quan-ly-ngan-hang-cau-hoi/mon-hoc',
+				component: './QuanLyNganHangCauHoi/MonHoc',
+			},
+			{
+				name: 'Câu hỏi',
+				path: '/quan-ly-ngan-hang-cau-hoi/cau-hoi',
+				component: './QuanLyNganHangCauHoi/CauHoi',
+			},
+			{
+				name: 'Đề thi',
+				path: '/quan-ly-ngan-hang-cau-hoi/de-thi',
+				component: './QuanLyNganHangCauHoi/DeThi',
+			},
+		],
+		icon: 'QuestionOutlined',
 	},
 	// DANH MUC HE THONG
 	// {
