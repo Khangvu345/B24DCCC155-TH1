@@ -1,0 +1,65 @@
+[
+  {
+    "id": "lh-001",
+    "khachHangId": "Nguyễn Văn A",
+    "nhanVienId": "nv-001",
+    "dichVuId": "dv-001",
+    "ngay": "2026-03-10",
+    "gioDat": "09:00",
+    "trangThai": "hoanThanh",
+    "ghiChu": "Khách yêu cầu cắt ngắn",
+    "thoiGianTao": "2026-03-08T10:00:00.000Z"
+  },
+  {
+    "id": "lh-002",
+    "khachHangId": "Trần Thị B",
+    "nhanVienId": "nv-001",
+    "dichVuId": "dv-002",
+    "ngay": "2026-03-10",
+    "gioDat": "11:00",
+    "trangThai": "hoanThanh",
+    "thoiGianTao": "2026-03-08T11:00:00.000Z"
+  },
+  {
+    "id": "lh-003",
+    "khachHangId": "Lê Văn C",
+    "nhanVienId": "nv-002",
+    "dichVuId": "dv-001",
+    "ngay": "2026-03-12",
+    "gioDat": "09:00",
+    "trangThai": "xacNhan",
+    "thoiGianTao": "2026-03-10T08:30:00.000Z"
+  },
+  {
+    "id": "lh-004",
+    "khachHangId": "Phạm Thị D",
+    "nhanVienId": "nv-002",
+    "dichVuId": "dv-003",
+    "ngay": "2026-03-12",
+    "gioDat": "14:00",
+    "trangThai": "choDuyet",
+    "ghiChu": "Lần đầu trải nghiệm dịch vụ",
+    "thoiGianTao": "2026-03-11T09:00:00.000Z"
+  },
+  {
+    "id": "lh-005",
+    "khachHangId": "Hoàng Văn E",
+    "nhanVienId": "nv-001",
+    "dichVuId": "dv-002",
+    "ngay": "2026-03-08",
+    "gioDat": "10:00",
+    "trangThai": "huy",
+    "ghiChu": "Khách bận đột xuất",
+    "thoiGianTao": "2026-03-06T15:00:00.000Z"
+  },
+  {
+    "id": "b0310442-21ff-4ec5-85f5-81c021e47240",
+    "khachHangId": "Khach Test",
+    "nhanVienId": "nv-001",
+    "dichVuId": "dv-001",
+    "ngay": "2026-03-15",
+    "gioDat": "09:00",
+    "trangThai": "hoanThanh",
+    "thoiGianTao": "2026-03-11T03:54:05.705Z"
+  }
+]

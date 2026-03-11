@@ -14,7 +14,7 @@ app.use(express.json());
 // Root route - hiển thị danh sách API endpoints
 app.get('/', (_req, res) => {
     res.json({
-        message: 'Backend Quản Lý Ngân Hàng Câu Hỏi',
+        message: 'Backend Đặt Lịch Dịch Vụ Spa',
         endpoints: {
             health: '/api/health',
             khoiKienThuc: '/api/quan-ly-ngan-hang-cau-hoi/khoi-kien-thuc',
@@ -22,6 +22,8 @@ app.get('/', (_req, res) => {
             cauHoi: '/api/quan-ly-ngan-hang-cau-hoi/cau-hoi',
             cauTrucDeThi: '/api/quan-ly-ngan-hang-cau-hoi/cau-truc-de-thi',
             deThi: '/api/quan-ly-ngan-hang-cau-hoi/de-thi',
+            lichHen: '/api/dat-lich-dich-vu-spa/lich-hen',
+            danhGia: '/api/dat-lich-dich-vu-spa/danh-gia',
         },
     });
 });
