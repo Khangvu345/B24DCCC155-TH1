@@ -1,23 +1,23 @@
 import { Request, Response } from "express";
 
-let danhSachLichHen = [
+export let danhSachLichHen = [
   { 
     _id: '1', 
     tenKhachHang: 'Nguyễn Văn A', 
     soDienThoai: '0987654321', 
     thoiGian: '2023-11-20T09:00:00.000Z', 
-    idDichVu: 'Dịch vụ Spa', 
+    idDichVu: 'Gội đầu massage', 
     idNhanVien: 'Trần Thị B', 
-    trangThai: 'Chờ duyệt'
+    trangThai: 'Hoàn thành'
   },
   { 
     _id: '2', 
     tenKhachHang: 'Lê Thị C', 
     soDienThoai: '0123456789', 
     thoiGian: '2023-11-21T14:30:00.000Z', 
-    idDichVu: 'Massage', 
+    idDichVu: 'Cắt tóc nam', 
     idNhanVien: 'Nguyễn Văn A', 
-    trangThai: 'Xác nhận'
+    trangThai: 'Hoàn thành'
   },
 ];
 

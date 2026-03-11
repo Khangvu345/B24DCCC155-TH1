@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 
-let danhSachNhanVien = [
+export let danhSachNhanVien = [
   { 
     _id: '1', 
     tenNhanVien: 'Nguyễn Văn A', 

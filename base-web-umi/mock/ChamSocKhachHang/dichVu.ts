@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 
-let danhSachDichVu = [
+export let danhSachDichVu = [
   { _id: '1', tenDichVu: 'Cắt tóc nam', gia: 50000, thoiGian: 30 },
   { _id: '2', tenDichVu: 'Gội đầu massage', gia: 100000, thoiGian: 45 },
   { _id: '3', tenDichVu: 'Nhuộm tóc', gia: 300000, thoiGian: 120 },
