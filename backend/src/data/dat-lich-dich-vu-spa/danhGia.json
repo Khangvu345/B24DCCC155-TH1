@@ -1,0 +1,28 @@
+[
+  {
+    "id": "dg-001",
+    "lichHenId": "lh-001",
+    "nhanVienId": "nv-001",
+    "soSao": 5,
+    "nhanXet": "Nhân viên rất nhiệt tình, tay nghề cao. Tôi rất hài lòng!",
+    "thoiGianTao": "2026-03-10T15:00:00.000Z",
+    "phanHoi": "Cảm ơn quý khách đã tin tưởng! Rất mong được phục vụ lần sau.",
+    "thoiGianPhanHoi": "2026-03-10T16:30:00.000Z"
+  },
+  {
+    "id": "dg-002",
+    "lichHenId": "lh-002",
+    "nhanVienId": "nv-001",
+    "soSao": 4,
+    "nhanXet": "Dịch vụ tốt, không gian sạch. Chờ hơi lâu một chút.",
+    "thoiGianTao": "2026-03-10T14:00:00.000Z"
+  },
+  {
+    "id": "dg-003",
+    "lichHenId": "lh-002",
+    "nhanVienId": "nv-001",
+    "soSao": 3,
+    "nhanXet": "Tạm ổn, sẽ cân nhắc quay lại.",
+    "thoiGianTao": "2026-03-10T14:30:00.000Z"
+  }
+]

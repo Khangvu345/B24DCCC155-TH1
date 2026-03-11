@@ -1,0 +1,23 @@
+[
+  {
+    "id": "nv-001",
+    "ten": "Nguyễn Thị Lan",
+    "soDienThoai": "0901234567",
+    "chuyenMon": "Tóc nữ",
+    "soKhachToiDa": 8
+  },
+  {
+    "id": "nv-002",
+    "ten": "Trần Văn Minh",
+    "soDienThoai": "0912345678",
+    "chuyenMon": "Tóc nam, Spa",
+    "soKhachToiDa": 6
+  },
+  {
+    "id": "nv-003",
+    "ten": "Lê Thị Hoa",
+    "soDienThoai": "0923456789",
+    "chuyenMon": "Spa, Chăm sóc da",
+    "soKhachToiDa": 5
+  }
+]

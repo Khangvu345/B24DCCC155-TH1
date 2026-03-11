@@ -1,0 +1,30 @@
+[
+  {
+    "id": "dv-001",
+    "ten": "Cắt tóc",
+    "gia": 80000,
+    "thoiGianPhut": 60,
+    "moTa": "Cắt, tạo kiểu tóc theo yêu cầu"
+  },
+  {
+    "id": "dv-002",
+    "ten": "Gội đầu & Sấy",
+    "gia": 50000,
+    "thoiGianPhut": 45,
+    "moTa": "Gội đầu dưỡng sinh, sấy tạo kiểu"
+  },
+  {
+    "id": "dv-003",
+    "ten": "Massage da mặt",
+    "gia": 150000,
+    "thoiGianPhut": 90,
+    "moTa": "Massage thư giãn, dưỡng ẩm da mặt"
+  },
+  {
+    "id": "dv-004",
+    "ten": "Nhuộm tóc",
+    "gia": 300000,
+    "thoiGianPhut": 120,
+    "moTa": "Nhuộm màu toàn phần hoặc highlight"
+  }
+]
