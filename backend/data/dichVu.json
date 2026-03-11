@@ -1,0 +1,18 @@
+[
+    {
+        "id": "dv_001",
+        "tenDichVu": "Massage Thụy Điển 60 phút",
+        "giaTien": 450000,
+        "thoiGianThucHien": 60,
+        "moTa": "Massage toàn thân thư giãn với tinh dầu",
+        "hinhAnh": ""
+    },
+    {
+        "id": "dv_002",
+        "tenDichVu": "Chăm sóc da mặt chuyên sâu",
+        "giaTien": 600000,
+        "thoiGianThucHien": 90,
+        "moTa": "Làm sạch, tẩy tế bào chết, đắp mặt nạ và điện di tinh chất",
+        "hinhAnh": ""
+    }
+]

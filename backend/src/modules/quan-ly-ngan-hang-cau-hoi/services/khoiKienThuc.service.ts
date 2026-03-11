@@ -27,7 +27,7 @@ export class KhoiKienThucService {
         };
         data.push(newItem);
         writeJsonFile(FILE_NAME, data);
-        return newItem;
+        return newItem;5
     }
 
     static update(id: string, body: { ten: string }): IKhoiKienThuc {
@@ -48,6 +48,6 @@ export class KhoiKienThucService {
             throw new AppError(`Không tìm thấy khối kiến thức với id: ${id}`, 404);
         }
         data.splice(index, 1);
-        writeJsonFile(FILE_NAME, data);
+        writeJsonFile(FILE_NAME, data);2
     }
 }

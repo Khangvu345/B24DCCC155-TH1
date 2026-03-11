@@ -1,0 +1,28 @@
+[
+    {
+        "id": "lh_001",
+        "dichVuId": "dv_001",
+        "nhanVienId": "nv_003",
+        "khachHang": {
+            "ten": "Khách A",
+            "soDienThoai": "0999999999"
+        },
+        "ngayHen": "2026-03-12",
+        "caHen": "chieu",
+        "trangThai": "hoan_thanh",
+        "tongTien": 450000
+    },
+    {
+        "id": "lh_002",
+        "dichVuId": "dv_002",
+        "nhanVienId": "nv_003",
+        "khachHang": {
+            "ten": "Khách B",
+            "soDienThoai": "0888888888"
+        },
+        "ngayHen": "2026-03-13",
+        "caHen": "sang",
+        "trangThai": "xac_nhan",
+        "tongTien": 600000
+    }
+]

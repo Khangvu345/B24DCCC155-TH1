@@ -1,0 +1,16 @@
+[
+    {
+        "id": "llv_001",
+        "nhanVienId": "nv_003",
+        "ngayLam": "2026-03-12",
+        "caLamViec": "sang",
+        "trangThai": "co_san"
+    },
+    {
+        "id": "llv_002",
+        "nhanVienId": "nv_003",
+        "ngayLam": "2026-03-12",
+        "caLamViec": "chieu",
+        "trangThai": "da_dat"
+    }
+]

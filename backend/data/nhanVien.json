@@ -1,0 +1,26 @@
+[
+    {
+        "id": "nv_001",
+        "hoTen": "Nguyễn Văn Quản Lý",
+        "email": "admin@spa.com",
+        "password": "password123",
+        "vaiTro": "quan_ly",
+        "soDienThoai": "0987654321"
+    },
+    {
+        "id": "nv_002",
+        "hoTen": "Trần Thị Lễ Tân",
+        "email": "letan@spa.com",
+        "password": "password123",
+        "vaiTro": "le_tan",
+        "soDienThoai": "0912345678"
+    },
+    {
+        "id": "nv_003",
+        "hoTen": "Lê Kỹ Thuật Viên",
+        "email": "ktv@spa.com",
+        "password": "password123",
+        "vaiTro": "nhan_vien",
+        "soDienThoai": "0933334444"
+    }
+]
