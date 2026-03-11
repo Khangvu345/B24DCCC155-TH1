@@ -1,0 +1,72 @@
+[
+  {
+    "id": "llv-001",
+    "nhanVienId": "nv-001",
+    "thu": 1,
+    "gioVao": "08:00",
+    "gioRa": "17:00"
+  },
+  {
+    "id": "llv-002",
+    "nhanVienId": "nv-001",
+    "thu": 2,
+    "gioVao": "08:00",
+    "gioRa": "17:00"
+  },
+  {
+    "id": "llv-003",
+    "nhanVienId": "nv-001",
+    "thu": 3,
+    "gioVao": "08:00",
+    "gioRa": "17:00"
+  },
+  {
+    "id": "llv-004",
+    "nhanVienId": "nv-001",
+    "thu": 5,
+    "gioVao": "09:00",
+    "gioRa": "17:00"
+  },
+  {
+    "id": "llv-005",
+    "nhanVienId": "nv-002",
+    "thu": 2,
+    "gioVao": "08:00",
+    "gioRa": "18:00"
+  },
+  {
+    "id": "llv-006",
+    "nhanVienId": "nv-002",
+    "thu": 4,
+    "gioVao": "08:00",
+    "gioRa": "18:00"
+  },
+  {
+    "id": "llv-007",
+    "nhanVienId": "nv-002",
+    "thu": 6,
+    "gioVao": "08:00",
+    "gioRa": "16:00"
+  },
+  {
+    "id": "llv-008",
+    "nhanVienId": "nv-003",
+    "thu": 1,
+    "gioVao": "09:00",
+    "gioRa": "18:00"
+  },
+  {
+    "id": "llv-009",
+    "nhanVienId": "nv-003",
+    "thu": 3,
+    "gioVao": "09:00",
+    "gioRa": "18:00"
+  },
+  {
+    "id": "llv-010",
+    "nhanVienId": "nv-003",
+    "thu": 5,
+    "gioVao": "09:00",
+    "gioRa": "18:00"
+  }
+]

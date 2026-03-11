@@ -19,5 +19,12 @@
     "soDienThoai": "0923456789",
     "chuyenMon": "Spa, Chăm sóc da",
     "soKhachToiDa": 5
+  },
+  {
+    "id": "05e8d34a-ac59-4c1f-ac73-9703aba7d7e9",
+    "ten": "Nguyen Test",
+    "soDienThoai": "0934567890",
+    "chuyenMon": "Spa",
+    "soKhachToiDa": 5
   }
 ]
