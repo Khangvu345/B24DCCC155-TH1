@@ -1,4 +1,4 @@
-# This is our pracetice 03 in PTIT
+# This is our pracetice 03 in PTIT - BE
 Đề bài: Xây dựng ứng dụng giúp khách hàng đặt lịch hẹn cho dịch vụ (cắt tóc, spa, khám bệnh, sửa chữa, v.v.) và quản lý lịch hẹn theo nhân viên, thời gian, trạng thái.
 
 Chức năng chính:
