@@ -84,6 +84,33 @@ export default [
 		],
 		icon: 'QuestionOutlined',
 	},
+	{
+		path: '/cham-soc-khach-hang',
+		name: 'Chăm sóc khách hàng',
+		routes: [
+			{
+				name: 'Quản lý lịch hẹn',
+				path: '/cham-soc-khach-hang/quan-ly-lich-hen',
+				component: './ChamSocKhachHang/components/QuanLyLichHen',
+			},
+			{
+				name: 'Đánh giá dịch vụ và nhân viên',
+				path: '/cham-soc-khach-hang/danh-gia-dich-vu-va-nhan-vien',
+				component: './ChamSocKhachHang/components/DanhGiaDichVuVaNhanVien',
+			},
+			{
+				name: 'Quản lý nhân viên và dịch vụ',
+				path: '/cham-soc-khach-hang/quan-ly-nhan-vien-va-dich-vu',
+				component: './ChamSocKhachHang/components/QuanLyNhanVienVaDichVu',
+			},
+			{
+				name: 'Thống kê và báo cáo',
+				path: '/cham-soc-khach-hang/thong-ke-va-bao-cao',
+				component: './ChamSocKhachHang/components/ThongKeVaBaoCao',
+			},
+		],
+		icon: 'QuestionOutlined',
+	},
 	// DANH MUC HE THONG
 	// {
 	// 	name: 'DanhMuc',
