@@ -5,7 +5,7 @@ import { EditOutlined, DeleteOutlined, PlusOutlined } from '@ant-design/icons';
 import FormCauHoi from './FormCauHoi';
 
 const DanhSachCauHoi = () => {
-    const { data, loading, fetchCauHoi, setRow, isEdit, setVisible, setIsEdit, visible, handleDelete, filters, setFilters } = useModel('quanlynganhangcauhoi.cauHoi');
+    const { data, loading, fetchCauHoi, setRow, isEdit, setVisible, setIsEdit, visible, handleDelete, setFilters } = useModel('quanlynganhangcauhoi.cauHoi');
     const { data: listMonHoc, fetchMonHoc } = useModel('quanlynganhangcauhoi.monHoc');
     const { data: listKhoiKienThuc, fetchKhoiKienThuc } = useModel('quanlynganhangcauhoi.khoiKienThuc');
 

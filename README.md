@@ -1,40 +1,99 @@
-# This is our pracetice 03 in PTIT
-Đề bài: Xây dựng ứng dụng giúp khách hàng đặt lịch hẹn cho dịch vụ (cắt tóc, spa, khám bệnh, sửa chữa, v.v.) và quản lý lịch hẹn theo nhân viên, thời gian, trạng thái.
+# Đề bài: Quản lý Câu lạc bộ và Đăng ký tham gia
 
-Chức năng chính:
+Xây dựng hệ thống quản lý câu lạc bộ và đăng ký tham gia, kèm chức năng báo cáo thống kê nâng cao.
 
-1. Quản lý nhân viên & dịch vụ
+## 1. Danh sách câu lạc bộ
 
-- Thêm/Sửa/Xóa nhân viên, mỗi nhân viên chỉ phục vụ số khách giới hạn/ngày
+### Bảng câu lạc bộ
 
-- Mỗi nhân viên có lịch làm việc riêng (Ví dụ: 9h-17h thứ 6)
+Các cột cần có:
 
-- Quản lý danh sách dịch vụ (Mỗi dịch vụ có giá, thời gian thực hiện)
+- Ảnh đại diện
+- Tên câu lạc bộ
+- Ngày thành lập
+- Mô tả (HTML)
+- Chủ nhiệm CLB (nhập text)
+- Hoạt động (Có/Không)
+- Thao tác: Chỉnh sửa, Xóa, Xem danh sách thành viên
 
-2. Quản lý lịch hẹn:
+### Chức năng
 
-- Đặt lịch hẹn (Chọn ngày, giờ, nhân viên phục vụ)
+- Thêm mới/Chỉnh sửa/Xóa CLB
+- Xem danh sách thành viên trong CLB
+- Tìm kiếm, sort trực tiếp trên Table
 
-- Kiểm tra lịch trùng (Không cho đặt trùng lịch đã có)
+## 2. Quản lý đơn đăng ký thành viên
 
-- Cập nhật trạng thái lịch hẹn (Chờ duyệt/Xác nhận/Hoàn thành/Hủy)
+### Bảng đơn đăng ký
 
-3. Đánh giá dịch vụ & nhân viên
+Các cột cần có:
 
-- Sau khi hoàn thành lịch hẹn, khách hàng có thể đánh giá
+- Họ tên
+- Email
+- SĐT
+- Giới tính
+- Địa chỉ
+- Sở trường
+- Câu lạc bộ (chọn từ danh mục)
+- Lý do đăng ký
+- Trạng thái (Pending, Approved, Rejected)
+- Ghi chú (lý do từ chối)
+- Thao tác: Xem chi tiết/Chỉnh sửa/Xóa
 
-- Hiển thị đánh giá trung bình của từng nhân viên
+### Chức năng
 
-- Nhân viên có thể phản hồi lại đánh giá
+- Thêm mới/Xem chi tiết/Chỉnh sửa/Xóa đơn đăng ký
+- Duyệt/Từ chối đơn với xác nhận qua modal
+- Khi từ chối, bắt buộc nhập lý do từ chối
+- Duyệt/Từ chối nhiều đơn cùng lúc
+- Gợi ý triển khai duyệt hàng loạt:
+  - Dùng `rowSelection` của Table để hiển thị cột checkbox
+  - Lưu các dòng được chọn (`rowSelected`) vào state
+  - Hiển thị nút hành động theo số lượng chọn, ví dụ: "Duyệt xx đơn đã chọn", "Không duyệt xx đơn đã chọn"
+- Lưu lịch sử thao tác duyệt/từ chối
+- Có chức năng xem lại lịch sử thao tác
 
-4. Thống kê & báo cáo
+Ví dụ lịch sử:
 
-- Thống kê số lượng lịch hẹn theo ngày/tháng
+- Admin đã Rejected vào lúc 17h ngày 09/04/2025, lý do: ...
 
-- Thống kê doanh thu theo dịch vụ & nhân viên
+## 3. Quản lý thành viên câu lạc bộ
 
-Yêu cầu về kỹ thuật:
+### Danh sách thành viên theo từng CLB
 
-Sử dụng project base umi, sử dụng model, tách components, tái sử dụng components, clean code...
-Chia menu, submenu rõ ràng, giao diện trực quan dễ sử dụng
-Có thể sử dụng thêm các components sẵn có trong project: Table, Chart, TinyEditor, MyDatepicker...
+- Bảng thành viên tương tự bảng đơn đăng ký (Họ tên, Email, SĐT...)
+- Chỉ hiển thị thành viên có trạng thái Approved
+
+### Chuyển CLB cho thành viên
+
+- Cho phép đổi CLB cho 1 hoặc nhiều thành viên cùng lúc
+- Khi đổi CLB, hiển thị modal gồm:
+  - Số lượng thành viên được chuyển
+  - CLB đích (chọn từ danh sách CLB)
+
+## 4. Báo cáo và thống kê
+
+- Thống kê tổng quan:
+  - Số CLB
+  - Số đơn đăng ký theo trạng thái: Pending, Approved, Rejected
+- ColumnChart số đơn đăng ký theo từng CLB:
+  - xAxis: tên CLB
+  - yAxis: 3 cột tương ứng 3 trạng thái
+- Xuất danh sách thành viên (Approved) theo từng CLB ra file XLSX
+  - Gợi ý thư viện: https://www.npmjs.com/package/xlsx
+
+## Yêu cầu kỹ thuật
+
+- Sử dụng project base Umi
+- Khai báo và thống nhất interface trong toàn bộ project
+- Có models
+- Tách components, form và tái sử dụng components
+- Sử dụng control/component của Antd/Project:
+  - Table
+  - UploadFile
+  - TinyEditor
+  - ColumnChart
+- Cho phép tìm kiếm, sort trực tiếp trên column của Table
+- Không dùng Tailwind CSS
+- Không dùng List (Antd)
+
