@@ -111,6 +111,38 @@ export default [
 		],
 		icon: 'TeamOutlined',
 	},
+	{
+		path: '/du-lich',
+		name: 'Ứng dụng du lịch',
+		routes: [
+			{
+				name: 'Khám phá',
+				path: '/du-lich/kham-pha',
+				component: './KeHoachDuLich/KhamPha',
+			},
+			{
+				name: 'Lịch trình',
+				path: '/du-lich/lich-trinh',
+				component: './KeHoachDuLich/LichTrinh',
+			},
+			{
+				name: 'Ngân sách',
+				path: '/du-lich/ngan-sach',
+				component: './KeHoachDuLich/NganSach',
+			},
+			{
+				name: 'Admin - Điểm đến',
+				path: '/du-lich/admin/diem-den',
+				component: './KeHoachDuLich/Admin/DiemDen',
+			},
+			{
+				name: 'Admin - Thống kê',
+				path: '/du-lich/admin/thong-ke',
+				component: './KeHoachDuLich/Admin/ThongKe',
+			},
+		],
+		icon: 'CompassOutlined',
+	},
 	// DANH MUC HE THONG
 	// {
 	// 	name: 'DanhMuc',
