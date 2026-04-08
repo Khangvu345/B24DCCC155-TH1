@@ -1,5 +1,29 @@
 import type { IInitialState } from './services/base/typing';
+import { QLCV_STORAGE_KEYS } from './services/QuanLyCongViec/auth';
 // import { currentRole } from './utils/ip';
+
+type VaiTroNguoiDung = 'admin' | 'nhanvien';
+
+const layVaiTroQlcvTuStorage = (): VaiTroNguoiDung | undefined => {
+	if (typeof window === 'undefined') return undefined;
+
+	const parseRole = (storage: Storage): VaiTroNguoiDung | undefined => {
+		try {
+			const raw = storage.getItem(QLCV_STORAGE_KEYS.currentUser);
+			if (!raw) return undefined;
+
+			const parsed = JSON.parse(raw) as { username?: string; role?: string };
+			if (parsed.role === 'admin' || parsed.role === 'nhanvien') return parsed.role;
+			if (parsed.username === 'admin') return 'admin';
+			if (parsed.username) return 'nhanvien';
+			return undefined;
+		} catch {
+			return undefined;
+		}
+	};
+
+	return parseRole(sessionStorage) || parseRole(localStorage);
+};
 
 /**
  * @see https://umijs.org/zh-CN/plugins/plugin-access
@@ -29,6 +53,12 @@ export default function access(initialState: IInitialState) {
 		// guest: (token && ((vaiTro && vaiTro === 'Guest') || !vaiTro)) || false,
 		accessFilter: (route: any) => scopes?.includes(route?.maChucNang) || false,
 		manyAccessFilter: (route: any) => route?.listChucNang?.some((role: string) => scopes?.includes(role)) || false,
+		qlcvAdmin: () => layVaiTroQlcvTuStorage() === 'admin',
+		qlcvNhanVien: () => layVaiTroQlcvTuStorage() === 'nhanvien',
+		qlcvNhanVienOrAdmin: () => {
+			const role = layVaiTroQlcvTuStorage();
+			return role === 'admin' || role === 'nhanvien';
+		},
 		// adminAccessFilter: (route: any) =>
 		//   (token && vaiTro && vaiTro === 'Admin') ||
 		//   initialState?.phanNhom?.nhom_vai_tro?.includes(route?.maChucNang) ||

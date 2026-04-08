@@ -1,57 +1,74 @@
-# De bai: Ung dung lap ke hoach du lich
+# Đề Bài: Ứng dụng Quản lý Công việc Nhóm
 
-Xay dung ung dung lap ke hoach du lich co giao dien responsive cho tablet va mobile. Yeu cau tap trung vao trai nghiem lap lich, quan ly ngan sach, va trang quan tri cho nguoi quan ly noi dung.
+## 1. Mục tiêu
 
-## Muc tieu
+Xây dựng ứng dụng giúp nhóm theo dõi, phân công và quản lý tiến độ công việc hằng ngày.
 
-- Giup nguoi dung tim kiem va chon diem den phu hop nhu cau.
-- Tao lich trinh theo ngay, tinh toan ngan sach va thoi gian di chuyen.
-- Quan ly chi tieu theo hang muc, canh bao vuot ngan sach.
-- Quan tri he thong diem den va thong ke su dung.
+## 2. Yêu cầu chức năng
 
-## Yeu cau chuc nang
+### 2.1. Đăng nhập / Đăng xuất
 
-### 1) Trang chu - Kham pha diem den
+- Cho phép người dùng nhập tên để đăng nhập.
+- Lưu thông tin người dùng vào `localStorage` hoặc `sessionStorage`.
+- Khi lưu thông tin đăng nhập vào `localStorage`, mật khẩu phải được hash trước khi lưu (không lưu mật khẩu dạng plain text).
+- Hiển thị tên người dùng hiện tại sau khi đăng nhập.
+- Hỗ trợ đăng xuất và xóa trạng thái đăng nhập.
+- Có sẵn 1 tài khoản quản trị để kiểm tra phân quyền:
+	- Username: `admin`
+	- Password: `admin123`
 
-- Hien thi danh sach diem den noi bat dang the (card) voi anh, dia diem, danh gia.
-- Co bo loc/bo sap xep:
-	- Loai hinh: bien, nui, thanh pho.
-	- Gia ca/chi phi du kien.
-	- Danh gia.
+### 2.2. Quản lý danh sách công việc
 
-### 2) Tao lich trinh du lich
+Mỗi công việc cần có các thông tin sau:
 
-- Chon diem den tu danh sach co san.
-- Them/xoa/sap xep diem den theo tung ngay.
-- Tinh toan:
-	- Tong ngan sach du kien.
-	- Thoi gian di chuyen giua cac diem.
+- Tên công việc
+- Người được giao
+- Mức độ ưu tiên: `Thấp` / `Trung bình` / `Cao`
+- Thời hạn hoàn thành (Deadline)
+- Trạng thái: `Chưa làm` / `Đang làm` / `Đã xong`
 
-### 3) Quan ly ngan sach
+Các thao tác bắt buộc:
 
-- Hien thi bieu do phan bo ngan sach theo hang muc:
-	- An uong
-	- Di chuyen
-	- Luu tru
-	- Khac (neu co)
-- Canh bao vuot ngan sach bang thong bao ro rang (alert/so lieu/bieu do).
+- Thêm công việc mới (qua form nhập liệu)
+- Chỉnh sửa công việc
+- Xóa công việc
+- Lưu danh sách công việc vào `localStorage`
 
-### 4) Trang quan tri (Admin)
+### 2.3. Bộ lọc và tìm kiếm
 
-- Quan ly diem den (them/sua/xoa) va upload hinh anh.
-- Thuoc tinh toi thieu cua diem den:
-	- Mo ta
-	- Thoi gian tham quan
-	- Muc chi cho an uong, luu tru, di chuyen
-	- Danh gia
-- Thong ke:
-	- So luot lich trinh duoc tao theo thang
-	- Dia diem pho bien
-	- So tien thu ve
-	- So tien theo tung hang muc
+- Lọc công việc theo trạng thái.
+- Lọc công việc theo người được giao.
+- Tìm kiếm công việc theo từ khóa trong tên công việc.
 
-## Yeu cau phi chuc nang
+### 2.4. Phân công công việc
 
-- Responsive tot tren desktop, tablet, mobile.
-- Giao dien de su dung, thong tin ro rang, de theo doi ngan sach.
-- Du lieu va thong ke cap nhat nhat quan.
+- Mỗi người dùng có thể được phân công các công việc khác nhau.
+- Hiển thị danh sách công việc đang được giao cho người dùng hiện tại.
+
+### 2.5. Hiển thị lịch công việc
+
+- Hiển thị các công việc trên lịch theo thời hạn hoàn thành.
+- Gợi ý thư viện: `react-big-calendar`.
+
+### 2.6. Thống kê
+
+- Tổng số công việc.
+- Số công việc đã hoàn thành.
+
+### 2.7. Phân quyền truy cập
+
+- Vai trò `admin`:
+	- Được xem màn hình **Danh sách công việc**.
+	- Được xem màn hình **Thống kê**.
+
+- Vai trò `nhân viên`:
+	- Chỉ được xem màn hình **Lịch công việc**.
+	- Chỉ được xem mục **Công việc của tôi**.
+	- Không được xem **Danh sách công việc** và **Thống kê**.
+
+## 3. Tiêu chí hoàn thành
+
+- Đáp ứng đầy đủ các chức năng bắt buộc nêu trên.
+- Dữ liệu được lưu và khôi phục đúng từ `localStorage`/`sessionStorage`.
+- Giao diện rõ ràng, dễ sử dụng, thuận tiện theo dõi tiến độ nhóm.
+- Phân quyền đúng theo vai trò: `admin` và `nhân viên`.

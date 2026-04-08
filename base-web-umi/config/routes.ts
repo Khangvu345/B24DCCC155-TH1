@@ -1,7 +1,4 @@
-﻿import component from '@/locales/en-US/component';
-import route from 'mock/route';
-
-export default [
+﻿export default [
 	{
 		path: '/user',
 		layout: false,
@@ -50,6 +47,42 @@ export default [
 		name: 'To Do List',
 		component: './TodoList',
 		icon: 'CheckSquareOutlined',
+	},
+	{
+		path: '/cong-viec',
+		name: 'Quan ly cong viec',
+		icon: 'ProfileOutlined',
+		routes: [
+			{
+				name: 'Dang nhap',
+				path: '/cong-viec/dang-nhap',
+				component: './QuanLyCongViec/DangNhap',
+			},
+			{
+				name: 'Danh sach',
+				path: '/cong-viec/danh-sach',
+				component: './QuanLyCongViec/DanhSach',
+				access: 'qlcvAdmin',
+			},
+			{
+				name: 'Cong viec cua toi',
+				path: '/cong-viec/cua-toi',
+				component: './QuanLyCongViec/CongViecCuaToi',
+				access: 'qlcvNhanVien',
+			},
+			{
+				name: 'Lich',
+				path: '/cong-viec/lich',
+				component: './QuanLyCongViec/Lich',
+				access: 'qlcvNhanVienOrAdmin',
+			},
+			{
+				name: 'Thong ke',
+				path: '/cong-viec/thong-ke',
+				component: './QuanLyCongViec/ThongKe',
+				access: 'qlcvAdmin',
+			},
+		],
 	},
 	{
 		path: '/oan-tu-ti',
