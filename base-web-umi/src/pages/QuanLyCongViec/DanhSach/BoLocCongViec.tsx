@@ -1,4 +1,4 @@
-import type { BoLocCongViec, TrangThaiCongViec } from '@/pages/QuanLyCongViec/typing';
+import type { BoLocCongViec, TrangThaiCongViec } from '@/services/QuanLyCongViec/typing';
 import { Button, Card, Col, Form, Input, Row, Select, Space } from 'antd';
 import { useEffect } from 'react';
 import { useModel } from 'umi';

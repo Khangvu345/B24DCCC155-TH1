@@ -1,4 +1,4 @@
-import type { KieuLuuDangNhap, NguoiDungDangNhap } from '@/pages/QuanLyCongViec/typing';
+import type { KieuLuuDangNhap, NguoiDungDangNhap } from '@/services/QuanLyCongViec/typing';
 import { dangNhap, dangXuat, layNguoiDungHienTai, layTaiKhoanMau, matKhauMau } from '@/services/QuanLyCongViec/auth';
 import { sha256 } from '@/utils/authHash';
 import { message } from 'antd';

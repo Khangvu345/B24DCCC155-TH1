@@ -1,4 +1,4 @@
-import type { CalendarCongViecEvent } from '@/pages/QuanLyCongViec/typing';
+import type { CalendarCongViecEvent } from '@/services/QuanLyCongViec/typing';
 import { layCalendarCongViec } from '@/services/QuanLyCongViec/congViec';
 import { useState } from 'react';
 

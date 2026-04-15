@@ -1,6 +1,6 @@
 import type { TFilter } from '@/components/Table/typing';
 import useInitModel from '@/hooks/useInitModel';
-import type { BoLocCongViec, CongViec, TrangThaiCongViec } from '@/pages/QuanLyCongViec/typing';
+import type { BoLocCongViec, CongViec, TrangThaiCongViec } from '@/services/QuanLyCongViec/typing';
 import {
 	capNhatCongViec,
 	capNhatTrangThaiCongViec,

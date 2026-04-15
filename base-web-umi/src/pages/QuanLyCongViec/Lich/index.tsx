@@ -1,4 +1,4 @@
-import type { CalendarCongViecEvent, CongViec } from '@/pages/QuanLyCongViec/typing';
+import type { CalendarCongViecEvent, CongViec } from '@/services/QuanLyCongViec/typing';
 import { Alert, Button, Card, Col, Row, Spin, Tag } from 'antd';
 import moment from 'moment';
 import { useEffect, useMemo } from 'react';

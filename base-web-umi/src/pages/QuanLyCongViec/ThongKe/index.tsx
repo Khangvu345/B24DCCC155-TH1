@@ -1,4 +1,4 @@
-import type { CongViec, ThongKeCongViec } from '@/pages/QuanLyCongViec/typing';
+import type { CongViec, ThongKeCongViec } from '@/services/QuanLyCongViec/typing';
 import { Alert, Button, Card, Col, Progress, Row, Spin, Statistic } from 'antd';
 import { useEffect, useMemo } from 'react';
 import { history, useModel } from 'umi';

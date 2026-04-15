@@ -1,4 +1,4 @@
-import type { ThongKeCongViec } from '@/pages/QuanLyCongViec/typing';
+import type { ThongKeCongViec } from '@/services/QuanLyCongViec/typing';
 import { layThongKeTongQuan } from '@/services/QuanLyCongViec/congViec';
 import { useState } from 'react';
 

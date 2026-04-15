@@ -1,7 +1,7 @@
 import axios from '@/utils/axios';
 import { EOperatorType } from '@/components/Table/constant';
 import type { TFilter } from '@/components/Table/typing';
-import type { BoLocCongViec, CongViec, ThongKeCongViec, TrangThaiCongViec } from '@/pages/QuanLyCongViec/typing';
+import type { BoLocCongViec, CongViec, ThongKeCongViec, TrangThaiCongViec } from '@/services/QuanLyCongViec/typing';
 import { layNguoiDungHienTai, QLCV_STORAGE_KEYS } from './auth';
 
 type PageQuery = {

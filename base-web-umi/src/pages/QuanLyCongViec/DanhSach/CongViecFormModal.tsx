@@ -1,4 +1,4 @@
-import type { CongViec, MucDoUuTien, TrangThaiCongViec } from '@/pages/QuanLyCongViec/typing';
+import type { CongViec, MucDoUuTien, TrangThaiCongViec } from '@/services/QuanLyCongViec/typing';
 import { Button, Card, DatePicker, Form, Input, Select } from 'antd';
 import moment from 'moment';
 import { useEffect } from 'react';

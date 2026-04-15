@@ -1,4 +1,4 @@
-import type { NguoiDungDangNhap } from '@/pages/QuanLyCongViec/typing';
+import type { NguoiDungDangNhap } from '@/services/QuanLyCongViec/typing';
 import { Alert, Button } from 'antd';
 import { useEffect } from 'react';
 import { history, useModel } from 'umi';

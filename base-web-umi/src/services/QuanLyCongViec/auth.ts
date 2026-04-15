@@ -1,5 +1,5 @@
 import axios from '@/utils/axios';
-import type { KieuLuuDangNhap, NguoiDungDangNhap, VaiTroNguoiDung } from '@/pages/QuanLyCongViec/typing';
+import type { KieuLuuDangNhap, NguoiDungDangNhap, VaiTroNguoiDung } from '@/services/QuanLyCongViec/typing';
 
 type TaiKhoanXacThuc = {
 	username: string;

@@ -1,6 +1,6 @@
 import TableBase from '@/components/Table';
 import type { IColumn } from '@/components/Table/typing';
-import type { CongViec, MucDoUuTien, NguoiDungDangNhap, TrangThaiCongViec } from '@/pages/QuanLyCongViec/typing';
+import type { CongViec, MucDoUuTien, NguoiDungDangNhap, TrangThaiCongViec } from '@/services/QuanLyCongViec/typing';
 import { DeleteOutlined, EditOutlined } from '@ant-design/icons';
 import { Alert, Button, Popconfirm, Space, Tag, Tooltip } from 'antd';
 import moment from 'moment';

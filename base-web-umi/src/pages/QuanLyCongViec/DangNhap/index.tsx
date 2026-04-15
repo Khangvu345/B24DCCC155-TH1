@@ -1,4 +1,4 @@
-import type { KieuLuuDangNhap, NguoiDungDangNhap } from '@/pages/QuanLyCongViec/typing';
+import type { KieuLuuDangNhap, NguoiDungDangNhap } from '@/services/QuanLyCongViec/typing';
 import { CheckCircleOutlined, LockOutlined, LogoutOutlined, LoginOutlined, UserOutlined } from '@ant-design/icons';
 import { Alert, Button, Card, Col, Form, Input, Radio, Row, Space, Typography } from 'antd';
 import { history, useModel } from 'umi';

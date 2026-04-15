@@ -1,4 +1,4 @@
-import type { CongViec, NguoiDungDangNhap, TrangThaiCongViec } from '@/pages/QuanLyCongViec/typing';
+import type { CongViec, NguoiDungDangNhap, TrangThaiCongViec } from '@/services/QuanLyCongViec/typing';
 import { Alert, Card, Empty, List, Select, Space, Tag, Typography } from 'antd';
 import moment from 'moment';
 import { useEffect } from 'react';
