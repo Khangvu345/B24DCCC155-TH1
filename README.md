@@ -1,40 +1,59 @@
-# This is our pracetice 03 in PTIT
-Đề bài: Xây dựng ứng dụng giúp khách hàng đặt lịch hẹn cho dịch vụ (cắt tóc, spa, khám bệnh, sửa chữa, v.v.) và quản lý lịch hẹn theo nhân viên, thời gian, trạng thái.
+﻿# This is our pracetice 08 in PTIT
+##  Mục tiêu
 
-Chức năng chính:
+Xây dựng một ứng dụng Blog cá nhân nơi người dùng có thể viết bài, quản lý nội dung và đọc các bài viết.
 
-1. Quản lý nhân viên & dịch vụ
+---
 
-- Thêm/Sửa/Xóa nhân viên, mỗi nhân viên chỉ phục vụ số khách giới hạn/ngày
+##  Chức năng chính
 
-- Mỗi nhân viên có lịch làm việc riêng (Ví dụ: 9h-17h thứ 6)
+###  1. Trang chủ
+- **Hiển thị danh sách bài viết** dưới dạng thẻ (Card) với:
+  - Ảnh đại diện
+  - Tiêu đề
+  - Tóm tắt nội dung
+  - Ngày đăng
+  - Tác giả
+  - Các thẻ tag
+- **Phân trang (Pagination)**  hiển thị 9 bài mỗi trang
+- **Lọc theo thẻ**  nhấn vào tag để lọc bài viết
+- **Tìm kiếm** bài viết theo từ khóa (debounce 300ms)
 
-- Quản lý danh sách dịch vụ (Mỗi dịch vụ có giá, thời gian thực hiện)
+###  2. Trang chi tiết bài viết
+- **Hiển thị toàn bộ nội dung** bài viết (render Markdown)
+- **Thông tin bài viết:**
+  - Tác giả
+  - Ngày đăng
+  - Danh sách thẻ
+- **Số lượt xem (view count)** tự động tăng mỗi lần truy cập
+- **Bài viết liên quan** (cùng thẻ, trừ bài đang xem)
+- **Nút quay lại** danh sách
 
-2. Quản lý lịch hẹn:
+###  3. Trang giới thiệu
+- **Thông tin tác giả:**
+  - Ảnh đại diện
+  - Tên
+  - Tiểu sử
+  - Kỹ năng
+  - Liên kết mạng xã hội
 
-- Đặt lịch hẹn (Chọn ngày, giờ, nhân viên phục vụ)
+###  4. Quản lý bài viết
+- **Bảng danh sách** hiển thị: Tiêu đề, Trạng thái, Thẻ, Lượt xem, Ngày tạo
+- **Tìm kiếm** theo tiêu đề
+- **Lọc** theo trạng thái (Nháp / Đã đăng)
+- **Thêm bài viết mới:** Form với các trường
+  - Tiêu đề
+  - Slug
+  - Nội dung
+  - Ảnh đại diện (URL)
+  - Thẻ
+  - Trạng thái
+- **Sửa bài viết:** Form điền sẵn thông tin cũ
+- **Xóa bài viết:** Popconfirm xác nhận trước khi xóa
 
-- Kiểm tra lịch trùng (Không cho đặt trùng lịch đã có)
+###  5. Quản lý thẻ
+- **Danh sách thẻ** với tên và số bài viết đang sử dụng
+- **Thêm / Sửa / Xóa thẻ** (inline hoặc Modal)
 
-- Cập nhật trạng thái lịch hẹn (Chờ duyệt/Xác nhận/Hoàn thành/Hủy)
+---
 
-3. Đánh giá dịch vụ & nhân viên
-
-- Sau khi hoàn thành lịch hẹn, khách hàng có thể đánh giá
-
-- Hiển thị đánh giá trung bình của từng nhân viên
-
-- Nhân viên có thể phản hồi lại đánh giá
-
-4. Thống kê & báo cáo
-
-- Thống kê số lượng lịch hẹn theo ngày/tháng
-
-- Thống kê doanh thu theo dịch vụ & nhân viên
-
-Yêu cầu về kỹ thuật:
-
-Sử dụng project base umi, sử dụng model, tách components, tái sử dụng components, clean code...
-Chia menu, submenu rõ ràng, giao diện trực quan dễ sử dụng
-Có thể sử dụng thêm các components sẵn có trong project: Table, Chart, TinyEditor, MyDatepicker...
