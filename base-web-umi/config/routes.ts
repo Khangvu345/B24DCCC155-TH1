@@ -1,7 +1,4 @@
-﻿import component from '@/locales/en-US/component';
-import route from 'mock/route';
-
-export default [
+﻿export default [
 	{
 		path: '/user',
 		layout: false,
@@ -21,6 +18,52 @@ export default [
 
 	///////////////////////////////////
 	// DEFAULT MENU
+	{
+		path: '/blog',
+		name: 'Blog',
+		icon: 'ReadOutlined',
+		routes: [
+			{
+				path: '/blog',
+				exact: true,
+				name: 'Trang chủ',
+				component: './Blog',
+			},
+			{
+				path: '/blog/about',
+				name: 'Giới thiệu',
+				component: './Blog/About',
+			},
+			{
+				path: '/blog/admin/posts',
+				name: 'Quản lý bài viết',
+				component: './Blog/AdminPosts',
+			},
+			{
+				path: '/blog/admin/tags',
+				name: 'Quản lý thẻ',
+				component: './Blog/AdminTags',
+			},
+		],
+	},
+	{
+		path: '/about',
+		redirect: '/blog/about',
+	},
+	{
+		path: '/admin/posts',
+		redirect: '/blog/admin/posts',
+	},
+	{
+		path: '/admin/tags',
+		redirect: '/blog/admin/tags',
+	},
+	{
+		path: '/posts/:id',
+		name: 'Chi tiết bài viết',
+		component: './Blog/Detail',
+		hideInMenu: true,
+	},
 	{
 		path: '/dashboard',
 		name: 'Dashboard',
@@ -122,6 +165,8 @@ export default [
 	},
 	{
 		path: '/',
+		exact: true,
+		redirect: '/blog',
 	},
 	{
 		path: '/403',
