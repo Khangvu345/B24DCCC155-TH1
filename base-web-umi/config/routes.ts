@@ -30,6 +30,12 @@
 				component: './Blog',
 			},
 			{
+				path: '/blog/posts/:id',
+				name: 'Chi tiết bài viết',
+				component: './Blog/Detail',
+				hideInMenu: true,
+			},
+			{
 				path: '/blog/about',
 				name: 'Giới thiệu',
 				component: './Blog/About',
@@ -49,19 +55,21 @@
 	{
 		path: '/about',
 		redirect: '/blog/about',
+		hideInMenu: true,
 	},
 	{
 		path: '/admin/posts',
 		redirect: '/blog/admin/posts',
+		hideInMenu: true,
 	},
 	{
 		path: '/admin/tags',
 		redirect: '/blog/admin/tags',
+		hideInMenu: true,
 	},
 	{
 		path: '/posts/:id',
-		name: 'Chi tiết bài viết',
-		component: './Blog/Detail',
+		redirect: '/blog/posts/:id',
 		hideInMenu: true,
 	},
 	{

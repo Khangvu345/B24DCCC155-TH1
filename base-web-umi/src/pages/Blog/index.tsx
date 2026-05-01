@@ -98,7 +98,7 @@ const BlogHome: React.FC = () => {
 								<Col xs={24} sm={12} lg={8} key={post.id}>
 									<PostCard
 										post={post}
-										onClick={() => history.push(`/posts/${post.id}`)}
+										onClick={() => history.push(`/blog/posts/${post.id}`)}
 									/>
 								</Col>
 							))}

@@ -8,10 +8,18 @@ const { Title, Paragraph, Text, Link } = Typography;
 const BlogAbout: React.FC = () => {
 	const [profile, setProfile] = useState<AuthorProfile | null>(null);
 
+	const normalizeProfile = (data?: AuthorProfile | null): AuthorProfile => ({
+		name: data?.name ?? 'Chưa cập nhật',
+		avatarUrl: data?.avatarUrl ?? '',
+		bio: data?.bio ?? '',
+		skills: data?.skills ?? [],
+		socials: data?.socials ?? [],
+	});
+
 	useEffect(() => {
 		const fetchProfile = async () => {
 			const data = await getAuthorProfile();
-			setProfile(data);
+			setProfile(normalizeProfile(data));
 		};
 		fetchProfile();
 	}, []);

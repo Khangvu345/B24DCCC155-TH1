@@ -91,7 +91,7 @@ const BlogDetail: React.FC = () => {
 						<Row gutter={[16, 16]}>
 							{relatedPosts.map((item) => (
 								<Col xs={24} sm={12} lg={8} key={item.id}>
-									<PostCard post={item} onClick={() => history.push(`/posts/${item.id}`)} />
+									<PostCard post={item} onClick={() => history.push(`/blog/posts/${item.id}`)} />
 								</Col>
 							))}
 						</Row>
